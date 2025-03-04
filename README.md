@@ -1,4 +1,9 @@
 # qa_python
+Метод test_add_new_book_add_one_book_only_once проверяет, что метод add_new_book побавляет одну книгу только один раз.
+
+Метод test_add_new_book_add_book_with_valid_title_only проверяет, что метод add_new_book добавляет только книги с 
+валидным названием.
+
 Метод test_set_book_genre_set_book_with_genre_fiction проверяет, что метод set_book_genre верно устанавливает  
 жанр книге.
 

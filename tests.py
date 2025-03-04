@@ -23,6 +23,23 @@ class TestBooksCollector:
     # напиши свои тесты ниже
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
 
+    def test_add_new_book_add_one_book_only_once(self):
+        collector = BooksCollector()
+        collector.add_new_book('Дюна')
+        collector.add_new_book('Дюна')
+        assert collector.get_books_genre() == {'Дюна': ''}
+
+    def test_add_new_book_add_book_with_valid_title_only(self):
+        collector = BooksCollector()
+        collector.add_new_book('Война и мир. Том первый. Чastи 1-3')
+        collector.add_new_book('')
+        collector.add_new_book('Преступление и наказание (перевод В. Голяницкого)')
+        collector.add_new_book('Дюна')
+        assert collector.get_books_genre() == {
+            'Война и мир. Том первый. Чastи 1-3': '',
+            'Дюна': ''
+        }
+
     def test_set_book_genre_set_book_with_genre_fiction(self):
         collector = BooksCollector()
         collector.add_new_book('Дюна')
