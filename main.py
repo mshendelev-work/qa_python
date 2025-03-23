@@ -55,3 +55,19 @@ class BooksCollector:
     # получаем список Избранных книг
     def get_list_of_favorites_books(self):
         return self.favorites
+
+
+# collector = BooksCollector()
+# collector.add_new_book('Дюна')
+# collector.add_new_book('Как приручить дракона')
+# collector.add_new_book('Солярис')
+# collector.add_new_book('Убийство на улице Морг')
+# collector.set_book_genre('Дюна', 'Фантастика')
+# collector.set_book_genre('Как приручить дракона', 'Мультфильмы')
+# collector.set_book_genre('Солярис', 'Фантастика')
+# collector.set_book_genre('Убийство на улице Морг', 'Детективы')
+# collector.add_book_in_favorites('Дюна')
+# print(collector.get_books_genre())
+# print(collector.get_books_with_specific_genre('Фантастика'))
+# print(collector.get_books_for_children())
+# print(collector.get_list_of_favorites_books())
